@@ -1,0 +1,143 @@
+# ==========================================================
+#   SXHKD CONFIGURATION FOR BSPWM
+# ==========================================================
+
+# ----------------------------------------------------------
+# PROGRAM LAUNCHERS
+# ----------------------------------------------------------
+
+super + Return
+    alacritty
+
+super + @space
+    rofi -theme tokyonight -show drun -icon-theme Papirus -show-icons
+
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# ----------------------------------------------------------
+# BSPWM CONTROL
+# ----------------------------------------------------------
+
+super + alt + {q,r}
+    bspc {quit,wm -r}
+
+super + q
+    bspc node -{c,k}
+
+super + m
+    bspc desktop -l next
+
+super + y
+    bspc node newest.marked.local -n newest.!automatic.local
+
+# ----------------------------------------------------------
+# WINDOW STATES AND FLAGS
+# ----------------------------------------------------------
+
+super + {t,shift + t,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+super + ctrl + {m,x,y,z}
+    bspc node -g {marked,locked,sticky,private}
+
+super + v
+    bspc node -g hidden
+
+super + shift + v
+    bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
+
+# ----------------------------------------------------------
+# FOCUS AND MOVEMENT
+# ----------------------------------------------------------
+
+super + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+super + {_,shift + }c
+    bspc node -f {next,prev}.local.!hidden.window
+
+super + bracket{left,right}
+    bspc desktop -f {prev,next}.local
+
+super + {grave,Tab}
+    bspc {node,desktop} -f last
+
+super + {o,i}
+    bspc wm -h off; bspc node {older,newer} -f; bspc wm -h on
+
+# ----------------------------------------------------------
+# DESKTOP NAVIGATION
+# ----------------------------------------------------------
+
+super + 1
+    bspc desktop -f I
+super + 2
+    bspc desktop -f II
+super + 3
+    bspc desktop -f III
+super + 4
+    bspc desktop -f IV
+super + 5
+    bspc desktop -f V
+
+super + shift + 1
+    bspc node -d I
+super + shift + 2
+    bspc node -d II
+super + shift + 3
+    bspc node -d III
+super + shift + 4
+    bspc node -d IV
+super + shift + 5
+    bspc node -d V
+
+# ----------------------------------------------------------
+# WINDOW MOVEMENT AND RESIZING
+# ----------------------------------------------------------
+
+super + alt + {h,j,k,l}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+super + alt + shift + {h,j,k,l}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+alt + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# ----------------------------------------------------------
+# MEDIA AND AUDIO CONTROLS
+# ----------------------------------------------------------
+
+super + Right
+    playerctl next
+
+super + Down
+    playerctl play-pause
+
+super + Left
+    playerctl previous
+
+# Volume controls (updated)
+super + Page_Up
+    amixer -q set Master 5%+ unmute
+
+super + Page_Down
+    amixer -q set Master 5%- unmute
+
+super + End
+    amixer -q set Master toggle
+
+# ----------------------------------------------------------
+# SYSTEM COMMANDS
+# ----------------------------------------------------------
+
+super + shift + r
+    bspc wm -r
+
+super + shift + Escape
+    reboot
+
+super + shift + e
+    pkill -u $USER
+
