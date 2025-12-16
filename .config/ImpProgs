@@ -1,5 +1,4 @@
 sudo
-**laptop-mode=tools
 fastfetch
 neofetch
 git
@@ -7,13 +6,9 @@ firefox
 thunar
 wpa_supplicant
 networkkmanager
-(chromium)
-ble.sh
 alacritty
 x-server
 xorg-driver
-**intel-drivers
-||nvidia-drivers
 discord
 vlc
 chrony
@@ -28,3 +23,8 @@ sxhkd
 bspwm
 nerd-mono-font
 playerctl
+ble.sh
+**laptop-mode=tools
+**intel-drivers
+||nvidia-drivers
+(chromium)
