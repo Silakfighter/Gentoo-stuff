@@ -1,5 +1,4 @@
-sudo 
-:fastfetch neofetch git firefox thunar wpa_supplicant networkkmanager alacritty x-server xorg-driver discord vlc chrony dbus xfsprogs powertop picom dunst polybar rofi sxhkd bspwm nerd-mono-font playerctl chromium
+sudo emerge fastfetch neofetch git firefox thunar wpa_supplicant networkkmanager alacritty x-server xorg-drivers discord vlc chrony dbus xfsprogs powertop picom dunst polybar rofi sxhkd bspwm nerd-mono-font playerctl chromium
 ble.sh
 **laptop-mode=tools
 **thermald
@@ -9,9 +8,8 @@ ble.sh
 
 rc-services default->
 dbus
-wpa_supplicant
-(networkmanager)
+wpa_supplicant oder networkmanager
 chronyd
 **laptop_mode
 **power_profiles
-thermald
+**thermald
