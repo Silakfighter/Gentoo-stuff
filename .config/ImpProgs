@@ -1,34 +1,11 @@
-sudo
-fastfetch
-neofetch
-git
-firefox
-thunar
-wpa_supplicant
-networkkmanager
-alacritty
-x-server
-xorg-driver
-discord
-vlc
-chrony
-dbus
-xfsprogs
-powertop
-picom
-dunst
-polybar
-rofi
-sxhkd
-bspwm
-nerd-mono-font
-playerctl
+sudo 
+:fastfetch neofetch git firefox thunar wpa_supplicant networkkmanager alacritty x-server xorg-driver discord vlc chrony dbus xfsprogs powertop picom dunst polybar rofi sxhkd bspwm nerd-mono-font playerctl chromium
 ble.sh
 **laptop-mode=tools
 **thermald
 **intel-drivers
 ||nvidia-drivers
-(chromium)
+
 
 rc-services default->
 dbus
