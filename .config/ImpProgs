@@ -25,6 +25,16 @@ nerd-mono-font
 playerctl
 ble.sh
 **laptop-mode=tools
+**thermald
 **intel-drivers
 ||nvidia-drivers
 (chromium)
+
+rc-services default->
+dbus
+wpa_supplicant
+(networkmanager)
+chronyd
+**laptop_mode
+**power_profiles
+thermald
