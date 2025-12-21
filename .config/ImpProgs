@@ -1,4 +1,4 @@
-sudo emerge fastfetch neofetch git firefox thunar wpa_supplicant networkkmanager alacritty x-server xorg-drivers discord vlc chrony dbus xfsprogs powertop picom dunst polybar rofi sxhkd bspwm nerd-mono-font playerctl feh chromium
+sudo emerge fastfetch neofetch pipewire wireplumber git firefox thunar wpa_supplicant networkkmanager alacritty x-server xorg-drivers discord vlc chrony dbus xfsprogs powertop picom dunst polybar rofi sxhkd bspwm nerd-mono-font playerctl feh chromium
 ble.sh
 **laptop-mode=tools
 **thermald
